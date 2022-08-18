@@ -8,4 +8,4 @@ tetrio-metrics:
 
 docker-tetrio-metrics:
 	docker build . -t tetrio-metrics -f tetrio-metrics.Dockerfile
-	docker run --rm -v $(PWD):/mnt/tetrio-metrics-archive --name tetrio-metrics --restart always tetrio-metrics
+	docker run -d -v $(PWD):/mnt/tetrio-metrics-archive --name tetrio-metrics --restart always tetrio-metrics
