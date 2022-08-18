@@ -1,0 +1,4 @@
+[main]
+PollIntervalSeconds=60
+TetrioUserID=""
+DatabaseFilePath="data.db"
