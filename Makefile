@@ -2,10 +2,6 @@
 archive:
 	./archive.sh $(DB)
 
-.PHONY: tetrio-metrics
-tetrio-metrics:
-	./tetrio-metrics.sh
-
 docker-tetrio-metrics:
-	docker build . -t tetrio-metrics -f tetrio-metrics.Dockerfile
+	docker build . -t tetrio-metrics
 	docker run -d -v $(PWD):/mnt/tetrio-metrics-archive --name tetrio-metrics --restart always tetrio-metrics
